@@ -30,15 +30,13 @@ cd $HOME
 
 clear
 
-git clone https://github.com/anorebel/OhMyTermux.git $HOME/OhMyTermux --depth 1 | lolcat
-
 if [ -d "$HOME/.termux" ]; then
  mv $HOME/.termux $HOME/.termux.bak
 fi
 
 cp -R $HOME/OhMyTermux/.termux $HOME/.termux
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh --depth 1 | lolcat
+git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh --depth 1 | lolcat
 
 printf "${BLUE}Looking for an existing zsh config...${NORMAL}\n"
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
